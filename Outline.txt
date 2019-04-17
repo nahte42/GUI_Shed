@@ -1,0 +1,7 @@
+What it needs to do:
+
+Create Employees 
+Save Employees Info
+Make Graph
+Make Schedule
+Export Schedule/Graph
