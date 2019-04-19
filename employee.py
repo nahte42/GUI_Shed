@@ -1,7 +1,14 @@
+from tkinter import *
+
+myEmpList = []
+
+
+
 class Employee:
 	name = ""
 	prefHours = ""
 	availability = ""
+	availTime = {}
 	
 	def __init__(self, name, prefHours, availability):
 		self.name = name
@@ -28,45 +35,3 @@ def createEmployee(name, pref, avail):
 	newEmp = Employee(name, pref, avail)
 	return newEmp
 
-	
-employeeFile = open('employees.txt', 'r')	
-#test = employeeFile.readline()
-#print(test)
-
-
-myEmpList = []
-
-
-#create the array of employee objects from a file
-for line in employeeFile:
-	name = ""
-	prefH = ""
-	avail = ""
-	i = 0
-	while i < len(line):
-		if line[i].isdigit():
-			prefH += line[i]
-		elif line[i].isupper() and i > 0:
-			avail += line[i]
-		elif line[i] == "\n":
-			nope = ""
-		else:
-			name += line[i]
-		i = i + 1
-	
-	myEmpList.append(createEmployee(name, prefH, avail))		
-			
-
-employeeFile.close()
-
-employeeFile = open('employees.txt', 'w')
-
-
-#write array of employees to file
-for x in myEmpList:
-	employeeFile.write(x.getName())
-	employeeFile.write(x.getPref())
-	employeeFile.write(x.getAvai())
-	employeeFile.write("\n")
-	
-employeeFile.close()
