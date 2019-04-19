@@ -1,1 +1,1 @@
-JNJ_Schedule
+This is merely a scheduling applcationg I am making for my part time job to get some experience under my belt
