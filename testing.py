@@ -1,4 +1,5 @@
 from tkinter import *
+from employee import *
 
 def creatMenu(window):
 	myMenNew = Menu(window)
