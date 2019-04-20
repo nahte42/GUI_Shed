@@ -2,9 +2,6 @@
 from tkinter import *
 from employee import *
 
-#Global Vars cause Im not sure how to get around scope in the tkinter library
-name = avai = pref = ""
-
 #This functions creates menus for whatever window was passed to it
 def creatMenu(window):
 	myMenNew = Menu(window)
