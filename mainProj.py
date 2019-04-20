@@ -73,7 +73,7 @@ def addEmployeeWindow():
 	label3.place(x=0, y = 80)
 	
 
-	myBut = Button(newTop, text = "Add Employee", command = addEmployee(nameEntry, prefEntry, avaiEntry))
+	myBut = Button(newTop, text = "Add Employee", command =lambda: addEmployee(nameEntry, prefEntry, avaiEntry))
 	myBut.place(x = 0, y = 120)
 	
 	
