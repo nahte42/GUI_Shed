@@ -33,12 +33,11 @@ def createTopLevel():
 	newTop.config(menu = gnuMenu)
 	#createButtons(newTop)
 	newTop.mainloop()
-	
 
 #This is used to create the add employee function and window
 def addEmployee(nameEntry, prefEntry, avaiEntry):
 		
-	employeeFile = open('employees.txt', 'w')
+	employeeFile = open('employees.txt', 'a')
 	gnuEmployee = Employee(nameEntry.get(), prefEntry.get(), avaiEntry.get())
 	myEmpList.append(gnuEmployee)
 	nameEntry.delete(0,END)
@@ -51,7 +50,6 @@ def addEmployee(nameEntry, prefEntry, avaiEntry):
 	employeeFile.write("\n")
 	
 	employeeFile.close()
-	
 def addEmployeeWindow():
 	newTop = Toplevel()
 	
@@ -82,6 +80,9 @@ def addEmployeeWindow():
 	newTop.config(menu = gnuMenu)
 	newTop.geometry("500x300")
 	newTop.mainloop()
+
+
+
 def startUp():
 	employeeFile = open('employees.txt', 'r')	
 	for line in employeeFile:
